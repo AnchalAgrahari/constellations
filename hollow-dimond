@@ -1,0 +1,34 @@
+n = int(input("Enter the number: "))
+# for the space in the first line kind off
+for i in range (1, n+1):
+    print(" " * (n- i), end="")  # for space in the first row 
+
+
+    for j in range (1 , 2*i):       #range is from 1 to (if i = 4 then 2*i =8) 8 leaving 0 of the row)
+        if  j==1 or j == 2*i-1 or i == n  :   #j==1 is for the first * of each row and j==2*i-1 is for last star for the row /// and we use i==n if we need base of the triangle 
+            print("*", end="")    #upper part of the dimond
+        else:
+            print(" ", end="")
+    print()
+
+for i in range (n-1, 0 ,-1):            # to reverse the row 
+    print(" " * (n- i), end="") #for space in the last row
+
+    for j in range (1 , 2*i):
+        if   j==1 or j == 2*i-1  :
+            print("*", end="")    #lower part of the dimond
+        else:
+            print(" ", end="")
+    print()
+
+"""
+#for invertrd part
+    for i in range(1, n+1):
+        print(" "*i, end="")
+     #for star and spaces
+        for j in range (1, 2*i):
+            if j==i or i==n-i or j == 2*n-1:
+                print("*",end="")
+            else:
+                print("", end="")
+        """
